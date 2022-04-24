@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="title">Survey form </h1>
+
+    <p id="description"> This survey is designed to collect information of on Apple prdoducts </p>
+
+
+    <form id="survey-form">
+        <div>
+            <label id="name-label" for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';" required />
+        </div>
+
+        <div>
+            <label id="email-label" for="email"> Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';" required />
+        </div>
+        <div>
+            <label id="number-label" for="number">Age </label>
+            <input type="number" name="number" id="number" min=0 max=99 class="form-control" placeholder="Age"
+            onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';" id="input" required />
+
+        </div>
+
+        <div class="form-control">
+            <p>Gender</p>
+            <select id="dropdown" name="gender" class="form-control" required>
+                <option value="">Please choose one</option>
+                <option value="sex">female</option>
+                <option value="sex">male</option>
+                <option value="sex">non-binary</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <p>What is your favorite Apple product?</p>
+            <label>
+                <input name="user-recommend" value="iPhone" type="radio" class="input-radio" checked />iPhone
+            </label>
+
+            <label>
+                <input name="user-recommend" value="mac" type="radio" class="input-radio" />MacAir
+            </label>
+            <label>
+                <input name="user-recommend" value="watch" type="radio" class="input-radio" />Apple Watch
+            </label>
+        </div>
+
+        <br>
+        <div class="form-group">
+            <p>
+                What would you like to see improved in different Apple products?
+                <span class="clue">(multiple checks)</span>
+            </p>
+            <label><input name="prefer" value="design" type="checkbox" class="input-checkbox" />Design</label>
+            <label>
+                <input name="prefer" value="lifecycle" type="checkbox" class="input-checkbox" />Longer lifespan
+            </label>
+
+            <label>
+                <input name="prefer" value="longer battery capacity" type="checkbox" class="input-checkbox" />Better
+                battery</label>
+            <label>
+                <input name="prefer" value="all" type="checkbox" class="input-checkbox" />All of those listed
+                before</label>
+            <br>
+
+            <div class="form-group">
+                <p>Any comments regarding on our products?</p>
+                <textarea id="comments" class="input-textarea" name="comment"
+                    placeholder="Enter your comment here..."></textarea>
+
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button"> Submit
+                </button>
+            </div>
+
+    </form>
+</body>
+
+</html>
